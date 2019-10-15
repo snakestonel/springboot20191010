@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>生日</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>工资</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr th:each="users:${users}">
+               <td th:text="${users.t_id}"></td>
+               <td th:text="${users.t_name}"></td>
+               <td th:text="${users.t_birth}"></td>
+                <td th:text="${users.t_sex}"></td>
+               <td th:text="${users.t_age}"></td>
+               <td th:text="${users.t_salary}"></td>
+           </tr>
+        </tbody>
+    </table>
+
+</body>

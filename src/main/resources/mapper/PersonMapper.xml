@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 命名空间应该是包名 + 接口名 -->
+<mapper namespace="com.hp.springboot.mapper.PersonDAO">
+
+<!-- id应该是接口中的方法，结果类型如果没有别名则应使用全称 -->
+
+<!-- 获得所有用户信息 -->
+<select id="getAll" resultType="com.hp.springboot.entities.Person">
+  select *
+  from t_person
+</select>
+
+<select id="getMan" resultType="com.hp.springboot.entities.Person">
+ SELECT *
+ from t_person 
+ where t_sex = '男'
+</select>
+
+</mapper>
